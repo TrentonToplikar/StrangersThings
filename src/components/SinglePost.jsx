@@ -2,7 +2,7 @@ import React from "react";
 import { EditButton, DeleteButton } from "./Delete&edit";
 import { DeletePost } from "../api/Delete";
 import { MessageForm } from "./MessageForm";
-import "./SinglePost.css";
+import "./styles/SinglePost.css";
 
 ////////// this is the view you see when you select view post  \\\\\\\\\\
 export const SinglePost = ({ selectedPost, setSelectedPost }) => {

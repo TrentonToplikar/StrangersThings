@@ -2,7 +2,7 @@ import React from "react";
 import { EditButton, DeleteButton } from "./Delete&edit";
 import { DeletePost } from "../api/Delete";
 
-import "./profile.css";
+import "./styles/profile.css";
 
 ////////// this is the profile page where all your posts show up active and inactive   \\\\\\\\\\
 export const Profile = ({ user }) => {

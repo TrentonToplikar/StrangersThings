@@ -34,33 +34,11 @@ function App() {
       <Navbar setToken={setToken} user={user} />
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <PostList
-              token={token}
-              selectedPost={selectedPost}
-              setSelectedPost={setSelectedPost}
-            />
-          }
-        />
-        <Route
-          path="/Login"
-          element={<LoginForm setToken={setToken} setUser={setUser} />}
-        />
+        <Route path="/" element={<PostList token={token} selectedPost={selectedPost} setSelectedPost={setSelectedPost} /> } />
+        <Route path="/Login" element={<LoginForm setToken={setToken} setUser={setUser} />} />
         <Route path="/Postform" element={<PostForm token={token} />} />
         <Route path="/EditPost" element={<EditPost />} />
-        <Route
-          path="/Profile"
-          element={
-            <Profile
-              user={user}
-              selectedPost={selectedPost}
-              setSelectedPost={setSelectedPost}
-            />
-          }
-        />
-
+        <Route path="/Profile" element={ <Profile user={user} selectedPost={selectedPost} setSelectedPost={setSelectedPost} /> }/>
         <Route path="/Register" element={<Register setToken={setToken} />} />
       </Routes>
     </div>

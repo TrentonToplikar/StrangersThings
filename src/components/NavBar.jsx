@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Logout } from "./Login";
-import "./NavBar.css";
+import "./styles/NavBar.css";
 
 ////////// this is the nav bar with all my funky functions that determine what shows up  \\\\\\\\\\
 export const Navbar = ({ setToken, user }) => {

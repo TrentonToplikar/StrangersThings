@@ -4,7 +4,7 @@ import { DeleteButton, EditButton } from "./Delete&edit";
 import { DeletePost } from "../api/Delete";
 import { SinglePost } from "./SinglePost";
 
-import "./Posts.css";
+import "./styles/Posts.css";
 
 ////////// this is the big boy of the project. it renders all the posts and determines if you are searching or not and a lot of other things \\\\\\\\\\
 export const PostList = ({ token, selectedPost, setSelectedPost }) => {

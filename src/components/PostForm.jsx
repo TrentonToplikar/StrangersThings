@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CreatePosts } from "../api/CreatePostsAPI";
 
-import "./PostForm.css";
+import "./styles/PostForm.css";
 ////////// this is the input form you edit your post with. happy editing! \\\\\\\\\\
 export const PostForm = ({ token }) => {
   const [title, setTitle] = useState("");
