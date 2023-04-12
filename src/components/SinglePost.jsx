@@ -36,13 +36,7 @@ export const SinglePost = ({ selectedPost, setSelectedPost }) => {
           <DeleteButton post={selectedPost} />
         </form>
         <MessageForm selectedPost={selectedPost} />
-        <button
-          onClick={() => {
-            setSelectedPost([]);
-          }}
-        >
-          Go back
-        </button>
+        <button onClick={() => { setSelectedPost([]) }} > Go back </button>
       </div>
     </div>
   );

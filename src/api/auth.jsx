@@ -21,8 +21,8 @@ export const registerUser = async (username, password) => {
     const {
       data: { token },
     } = await response.json();
+    console.log("THIS IS THE DATA{}}", response)
     return token;
-    console.log("my response date", data);
   } catch (error) {
     console.log(error);
   }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { LoginAPI } from "../api/LoginAPI";
 import { fetchMe } from "../api/auth";
+import './styles/LoginRegister.css'
 
 ////////// this is the login form that lets you put your username and password. very secure \\\\\\\\\\
 export const LoginForm = ({ setToken, setUser }) => {
@@ -8,34 +9,43 @@ export const LoginForm = ({ setToken, setUser }) => {
   const [password, setPassword] = useState("");
 
   return (
-    <form
-      onSubmit={async (e) => {
-        e.preventDefault();
-        const token = await LoginAPI(username, password);
-        const user = await fetchMe(token);
-        // setUser(user.username);
-        setToken(token);
-        localStorage.setItem("token", token);
-        localStorage.setItem("user", user.username);
-      }}
-    >
-      <h1> ENTER LOGIN HERE PLEASE</h1>
-      <label htmlFor="username">Username: </label>
-      <input
-        value={username}
-        type="text"
-        placeholder="username"
-        onChange={(e) => setUsername(e.target.value)}
-      ></input>
-      <label htmlFor="password">Password: </label>
-      <input
-        value={password}
-        type="password"
-        placeholder="password"
-        onChange={(e) => setPassword(e.target.value)}
-      ></input>
-      <button type="submit">Login</button>
-    </form>
+    <div className="login-register-container">
+      <h1> Sign in</h1>
+        <form
+        className="form-container"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const token = await LoginAPI(username, password);
+            const user = await fetchMe(token);
+            // setUser(user.username);
+            setToken(token);
+            localStorage.setItem("token", token);
+            localStorage.setItem("user", user.username);
+            setUsername("")
+            setPassword("")
+          }}
+          >
+          <div className="form-items-container">
+            <input
+            className="form-item"
+              value={username}
+              type="text"
+              placeholder="Username"
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              ></input>
+            <input
+            className="form-item"
+              value={password}
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              ></input>
+            <button className="form-item" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
   );
 };
 

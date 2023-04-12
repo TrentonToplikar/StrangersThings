@@ -22,8 +22,6 @@ export const PostForm = ({ token }) => {
           setLocation("");
           setPrice("");
           setDelivery("");
-        } else {
-          window.alert("Please Login or Register");
         }
       }}
     >

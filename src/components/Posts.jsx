@@ -125,23 +125,24 @@ export const PostList = ({ token, selectedPost, setSelectedPost }) => {
           setSelectedPost={setSelectedPost}
         />
       ) : (
-        <div>
+        <div className="search-bar-page-container">
           <form
+          className="search-bar-container"
             onSubmit={(e) => {
               e.preventDefault();
               setSearching(false);
               setSearch("");
             }}
           >
-            <label>SearchBar: </label>
             <input
+            className="search-bar"
               value={search}
               onChange={searchEngine}
               type="text"
               placeholder="Search Title Here"
             ></input>
-            <button id="clear" type="submit">
-              clear
+            <button className="search-bar-button" id="clear" type="submit">
+              <img className="clear-image" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_not_interested_48px-512.png" alt="clear" />
             </button>
           </form>
           <div className="allposts">{searching ? NewList : List}</div>

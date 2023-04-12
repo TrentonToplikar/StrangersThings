@@ -10,7 +10,7 @@ export const Profile = ({ user }) => {
 
   console.log(user);
 
-  const List = user.posts.map((post) => {
+  const List = user.posts?.map((post) => {
     return (
       <div className="postProfile" key={post._id}>
         <h2>Title: {post.title}</h2>
@@ -41,5 +41,7 @@ export const Profile = ({ user }) => {
     );
   });
 
-  return <div className="allProfilePosts">{List}</div>;
+  return (
+  <div className="allProfilePosts">{List}</div>
+  )
 };

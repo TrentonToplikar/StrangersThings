@@ -1,13 +1,25 @@
 #navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items:baseline;
   font-size: 1.5em;
   position: static;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
   top: 3;
   color: black;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
 }
 
 #logo {
   height: 100px;
+}
+
+#left-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

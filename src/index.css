@@ -14,14 +14,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+body {
+  margin: 0px;
+}
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 h1 {
@@ -47,79 +46,95 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+a:hover {
+  color: #747bff;
+}
+button {
+  background-color: #f5f6f7;
+}
+button:hover {
+  background-color: #dadde1;
+}
+.post {
+  background-color: #f5f6f7;
+}
+.postProfile {
+  background-color: #f5f6f7;
+}
+.singlePost {
+  background-color: #f5f6f7;
+}
+#postForm {
+  transform: .5s ease all;
+  margin-left: 15px;
+  color: #022e6b;
+  padding: 4px;
+}
+#register {
+  transition: .5s ease all;
+  margin-right: 15px;
+  color: #022e6b;
+  padding: 4px;
+}
+#login {
+  transition: .5s ease all;
+  padding: 4px;
+  color: #022e6b;
+}
+
+#logout {
+  transition: .5s ease all;
+  padding: 4px;
+  color: #022e6b;
+}
+
+#profile {
+  transition: .5s ease all;
+  padding: 4px;
+  margin-right: 15px;
+  color: #022e6b;
+}
+
+#home {
+  transition: .5s ease all;
+  padding: 4px;
+  color: #022e6b;
+}
+
+#home:hover {
+  border-radius: 8px;
+  background-color: #0d08501c;
+}
+#profile:hover {
+  border-radius: 8px;
+  background-color: #0d08501c;
+}
+#logout:hover {
+  border-radius: 8px;
+  background-color: #0d08501c;
+}
+#login:hover {
+  background-color: #0d08501c;
+  transform: scale(1.9);
+  border-radius: 8px;
+}
+#register:hover {
+  border-radius: 8px;
+  background-color: #0d08501c;
+  transform: scale(1.9);
+}
+#postForm:hover {
+  background-color: #0d08501c;
+  transform: scale(1.9);
+  border-radius: 8px;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #dadde1;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f5f6f7;
-  }
-  button:hover {
-    background-color: #dadde1;
-  }
-  .post {
-    background-color: #f5f6f7;
-  }
-  .postProfile {
-    background-color: #f5f6f7;
-  }
-  .singlePost {
-    background-color: #f5f6f7;
-  }
-  #postForm {
-    margin-left: 15px;
-    color: #022e6b;
-  }
-  #register {
-    margin-right: 15px;
-    color: #022e6b;
-  }
-  #login {
-    color: #022e6b;
-  }
 
-  #logout {
-    color: #022e6b;
-  }
-
-  #profile {
-    margin-right: 15px;
-    color: #022e6b;
-  }
-
-  #home {
-    color: #022e6b;
-  }
-
-  #home:hover {
-    background-color: #0d085036;
-    border-radius: 5%;
-  }
-  #profile:hover {
-    background-color: #0d085036;
-    border-radius: 5%;
-  }
-  #logout:hover {
-    background-color: #0d085036;
-    border-radius: 5%;
-  }
-  #login:hover {
-    background-color: #0d085036;
-    border-radius: 5%;
-  }
-  #register:hover {
-    background-color: #0d085036;
-    border-radius: 5%;
-  }
-  #postForm:hover {
-    background-color: #0d085036;
-    border-radius: 5%;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
